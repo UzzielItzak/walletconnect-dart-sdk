@@ -64,7 +64,7 @@ class EthereumWalletConnectProvider extends WalletConnectProvider {
     final encodedTypedData = jsonEncode(typedData);
 
     final result = await connector.sendCustomRequest(
-      method: 'eth_signTypedData',
+      method: 'eth_signTypedData_v4',
       params: [address, encodedTypedData],
     );
 
